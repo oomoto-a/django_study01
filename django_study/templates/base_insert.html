@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% block extrahead %}
+        <link href="{% static 'base.css' %}" rel="stylesheet">
+        {% endblock %}
+        <title>登録ページ</title>
+    </head>
+    <body>
+        <h1>鬼殺隊</h1>
+        <div id="wrapper">
+            <div class="left-column">
+                {% block menu %}
+                {% endblock %}
+            </div>
+            <div class="right-column">
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">送信</button>
+    </form>
+    <p>{{ name }}</p>
+    <p>{{ sex }}</p>
+    <p>{{ feature }}</p>
+
+            </div>
+
+        </div>
+    </body>
+</html>

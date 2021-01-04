@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block extrahead %}
+    <link href="{% static 'base.css' %}" rel="stylesheet">
+    {% endblock %}
+    <title>トップページ</title>
+</head>
+<body>
+    <h1>鬼殺隊</h1>
+    <div id="wrapper">
+        <div class="left-column">
+            {% block body %}
+            {% endblock %}
+        </div>
+        <div class="right-column">
+
+
+
+        </div >
+
+    </div>
+</body>
+</html>
